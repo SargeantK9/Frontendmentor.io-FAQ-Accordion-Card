@@ -1,0 +1,59 @@
+:root {
+  --dark-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+  --soft-violet: hsl(273, 75%, 66%);
+  --soft-blue: hsl(240, 73%, 65%);
+  --very-dark-blue: hsl(237, 12%, 33%);
+  --grayish-blue: hsl(240, 6%, 50%);
+  --light-blue: hsl(240, 5%, 91%);
+  --font-size: 1rem;
+  --font-family: "Kumbh Sans";
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  background-image: linear-gradient(var(--soft-violet), var(--soft-blue));
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: calc(var(--font-size) * 70);
+  height: calc(var(--font-size) * 40);
+}
+
+picture img {
+  width: calc(var(--font-size) * 35);
+  position: relative;
+  right: calc(var(--font-size) * 5);
+}
+
+.text-box {
+  display: flex;
+  flex-direction: column;
+  width: calc(var(--font-size) * 25);
+}
+
+.text-box img {
+  width: var(--font-size);
+  display: inline-flex;
+}
+
+.heading {
+  display: flex;
+  flex-direction: row;
+}
