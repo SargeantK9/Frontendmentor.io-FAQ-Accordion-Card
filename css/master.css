@@ -20,10 +20,11 @@ body {
 main {
   background-image: linear-gradient(var(--soft-violet), var(--soft-blue));
   min-height: 100vh;
-  width: 100%;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: var(--font-family), sans-serif;
 }
 
 .wrapper {
@@ -32,8 +33,10 @@ main {
   justify-content: center;
   align-items: center;
   background-color: white;
-  width: calc(var(--font-size) * 70);
+  width: calc(var(--font-size) * 80);
   height: calc(var(--font-size) * 40);
+  overflow: hidden;
+  border-radius: calc(var(--font-size) * 2);
 }
 
 picture img {
@@ -43,17 +46,73 @@ picture img {
 }
 
 .text-box {
+  width: 50%;
   display: flex;
   flex-direction: column;
-  width: calc(var(--font-size) * 25);
+  justify-content: center;
 }
 
-.text-box img {
-  width: var(--font-size);
-  display: inline-flex;
+.text-box h1 {
+  align-self: flex-start;
+  margin: 0 0 var(--font-size) 0;
 }
 
-.heading {
+.faq {
+  width: 80%;
+}
+
+.faq-container {
+  margin: 0;
+}
+
+.faq-heading {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: calc(var(--font-size) * 1.5) 0;
+}
+
+.faq-heading h3 {
+  margin: 0;
+  font-weight: 400;
+  color: var(--dark-blue);
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.faq-heading img {
+  height: 0.75rem;
+}
+
+.faq-body p {
+  display: none;
+  font-weight: 400;
+  color: var(--grayish-blue);
+}
+
+.faq-divider {
+  color: var(--light-blue);
+}
+
+.faq input[type="radio"]:hover + label div h3 {
+  color: var(--soft-red);
+}
+
+.faq input[type="radio"]:checked + label div img {
+  transform: rotateZ(-180deg);
+}
+
+.faq input[type="radio"]:checked + label h3 {
+  font-weight: 700;
+}
+
+.faq input[type="radio"]:checked + label div p {
+  display: block;
+}
+
+.faq input[type="radio"] + label div img {
+  transition-duration: 0.5s;
 }
