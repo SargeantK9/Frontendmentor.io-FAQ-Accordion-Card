@@ -30,7 +30,7 @@ main {
 .wrapper {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color: white;
   width: calc(var(--font-size) * 80);
@@ -39,10 +39,17 @@ main {
   border-radius: calc(var(--font-size) * 2);
 }
 
+.desktop-box {
+  position: absolute;
+  left: calc(var(--font-size) * 33.5);
+  top: calc(var(--font-size) * 37);
+}
+
 picture img {
   width: calc(var(--font-size) * 35);
   position: relative;
-  right: calc(var(--font-size) * 5);
+  right: calc(var(--font-size) * 6);
+
 }
 
 .text-box {
@@ -58,7 +65,7 @@ picture img {
 }
 
 .faq {
-  width: 80%;
+  width: 70%;
 }
 
 .faq-container {
@@ -79,7 +86,7 @@ picture img {
   color: var(--dark-blue);
 }
 
-input[type="radio"] {
+input[type="checkbox"] {
   display: none;
 }
 
@@ -97,22 +104,22 @@ input[type="radio"] {
   color: var(--light-blue);
 }
 
-.faq input[type="radio"]:hover + label div h3 {
+.faq input[type="checkbox"]:hover + label div h3 {
   color: var(--soft-red);
 }
 
-.faq input[type="radio"]:checked + label div img {
+.faq input[type="checkbox"]:checked + label div img {
   transform: rotateZ(-180deg);
 }
 
-.faq input[type="radio"]:checked + label h3 {
+.faq input[type="checkbox"]:checked + label h3 {
   font-weight: 700;
 }
 
-.faq input[type="radio"]:checked + label div p {
+.faq input[type="checkbox"]:checked + label div p {
   display: block;
 }
 
-.faq input[type="radio"] + label div img {
+.faq input[type="checkbox"] + label div img {
   transition-duration: 0.5s;
 }
