@@ -27,12 +27,26 @@
 <body>
   <main>
     <div class="wrapper">
-      <picture>
+      <!--Could try building div within div for the image of the desktop woman with the desktop box
+       (set overlfow on the div that contains the woman to hidden
+        then set the position of box divs to relative and overlay them;
+        this should maintain positioning regardless of the display resolution or ratio then set a media query
+        when portrait to set this larger div to hidden and have another div that contains the mobile image that is
+        then set to visible.) -->
+      <!--<picture>
         <source media="(orientation: landscape)" srcset="./images/illustration-woman-online-desktop.svg">
         <source media="(orientation: portrait)" srcset="./images/illustration-woman-online-mobile.svg">
         <img src="./images/illustration-woman-online-mobile.svg" alt="illustration-woman-online">
-      </picture>
-      <img class="desktop-box" src="./images/illustration-box-desktop.svg" alt="desktop-box">
+      </picture>-->
+      <div class="desktop-images">
+        <div class="woman-desktop-image">
+          <img src="./images/illustration-woman-online-desktop.svg" alt="desktop-woman">
+        </div>
+        <img class="desktop-box" src="./images/illustration-box-desktop.svg" alt="desktop-box">
+      </div>
+      <div class="mobile-images">
+        <img src="./images/illustration-woman-online-mobile.svg" alt="mobile-woman">
+      </div>
       <div class="text-box">
         <h1>FAQ</h1>
         <form class="faq" action="index.html" method="post">
