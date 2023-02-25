@@ -1,0 +1,92 @@
+:root {
+  --dark-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+  --soft-violet: hsl(273, 75%, 66%);
+  --soft-blue: hsl(240, 73%, 65%);
+  --very-dark-blue: hsl(237, 12%, 33%);
+  --grayish-blue: hsl(240, 6%, 50%);
+  --light-blue: hsl(240, 5%, 91%);
+  --font-size: 1rem;
+  --font-family: "Kumbh Sans";
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  background-image: linear-gradient(var(--soft-violet), var(--soft-blue));
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: calc(var(--font-size) * 2);
+  padding: 0 var(--font-size) calc(var(--font-size) * 2);
+}
+
+.desktop-images {
+  display: none;
+}
+
+.mobile-images {
+  overflow: visible;
+  position: relative;
+  background-image: url('../images/bg-pattern-mobile.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  width: 70%;
+}
+
+.mobile-images img {
+  position: relative;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.faq-heading img {
+  height: 0.75rem;
+}
+
+.faq-body p {
+  display: none;
+  font-weight: 400;
+  color: var(--grayish-blue);
+}
+
+.faq-divider {
+  color: var(--light-blue);
+}
+
+.faq input[type="radio"]:hover + label div h3 {
+  color: var(--soft-red);
+}
+
+.faq input[type="radio"]:checked + label div img {
+  transform: rotateZ(-180deg);
+}
+
+.faq input[type="radio"]:checked + label div h3 {
+  font-weight: 700;
+}
+
+.faq input[type="radio"]:checked + label div p {
+  display: block;
+}
+
+.faq input[type="radio"] + label div img {
+  transition-duration: 0.5s;
+}

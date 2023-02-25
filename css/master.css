@@ -170,10 +170,4 @@ input[type="radio"] {
     bottom: calc(var(--font-size) * 7);
   }
 
-  .text-box {
-    width: 100%;
-  }
-
-  .faq-heading {
-  }
 }
